@@ -1,0 +1,19 @@
+<h2>add-student</h2>
+<div *ngIf="massage" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>addedStudent Successfully</strong>
+    <button (click)="removeMassage()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<form [formGroup]="addStudent" (ngSubmit)="saveStudent()"> 
+    <div class="mb-3">
+        <label  class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter your Name" formControlName="name">
+      </div>
+    <div class="mb-3">
+      <label  class="form-label">Email</label>
+      <input type="email" class="form-control" placeholder="Enter your Email" formControlName="email">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
